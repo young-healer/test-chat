@@ -1,0 +1,116 @@
+.container {
+  position: relative;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+
+  .dialog {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 480px;
+
+    .your-message {
+      background-color: #e4f1f7;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      margin: 10px 0 15px 0;
+      border-radius: 15px;
+      .date {
+        display: flex;
+        margin: 0 15px 10px 15px;
+      }
+    }
+    .interlocutors {
+      margin: 10px 0 15px 0;
+
+      display: flex;
+      flex-direction: row;
+      .avatar-for-dialogs {
+        display: flex;
+        width: 40px;
+        height: 40px;
+      }
+      .interlocutor {
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        border-radius: 15px;
+        margin: 10px 0 15px 60px;
+
+      }
+      .date {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px 10px 10px;
+      }
+    }
+
+    .interlocutors:last-child {
+      .interlocutor {
+        margin: 0 !important;
+        margin-left: 20px !important;
+      }
+    }
+    .message {
+      margin: 10px 20px 10px 20px;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    border-top: solid 1px gray;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+
+    .textarea {
+      width: 85%;
+      height: 50px;
+      margin-right: 15px;
+      border-style: none;
+      line-height: 50px;
+      resize: none;
+      text-indent: 20px;
+    }
+    .button-send {
+      position: absolute;
+      bottom: 10px;
+      width: 70px;
+      height: 40px;
+      color: white;
+      background-color: grey;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+  .header {
+    background-color: #f2f2f2;
+    display: flex;
+    -ms-flex-align: center;
+    width: 100%;
+    height: 60px;
+    div {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      img {
+        flex-direction: row;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        margin-right: 10px;
+      }
+      p {
+        flex-direction: row;
+      }
+    }
+  }
+  .dialog::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    background: transparent;
+  }
+}
